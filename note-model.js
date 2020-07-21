@@ -5,12 +5,12 @@
 // var pathToHtmlAndJsFiles = path.join(__dirname, "noteApp");
 // var server = httpServer.createServer({ root: pathToHtmlAndJsFiles });
 // server.listen(3000);
-(function(exports) {
+// (function(exports) {
   function Note() {
     this.notes = " ";
   };
-  exports.Note = Note;
-})(this);
+//   exports.Note = Note;
+// })(this);
 
 // (function(exports) {
 //   function Circle() {
