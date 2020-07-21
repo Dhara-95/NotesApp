@@ -6,9 +6,19 @@
 // var server = httpServer.createServer({ root: pathToHtmlAndJsFiles });
 // server.listen(3000);
 // (function(exports) {
-  function Note() {
-    this.notes = " ";
+
+  class Note {
+
+    constructor(){
+    this.content = " ";
+    }
+
+    create(note) {
+      // var note
+      this.content = note
+    }
   };
+
 //   exports.Note = Note;
 // })(this);
 
