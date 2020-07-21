@@ -1,11 +1,11 @@
 // function testNote() {
 //  var note = new Note();
-//   assert.isTrue(note.notes == note);
+//   assert.isTrue(note.note === 20);
 // };
-// testNote();
+//   testNote();
 
-function testCircleRadiusDefaultsTo10() {
-  var circle = new Circle();
-  assert.isTrue(circle.radius === 10);
+function testNoteisinstantiatedwithtext() {
+  var note = new Note();
+  assert.isTrue(note.notes === " ");
 };
-  testCircleRadiusDefaultsTo10();
+  testNoteisinstantiatedwithtext();
