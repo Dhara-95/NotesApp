@@ -5,7 +5,6 @@
 // var pathToHtmlAndJsFiles = path.join(__dirname, "noteApp");
 // var server = httpServer.createServer({ root: pathToHtmlAndJsFiles });
 // server.listen(3000);
-// (function(exports) {
 
   class Note {
 
@@ -14,17 +13,18 @@
     }
 
     create(note) {
-      // var note
       this.content = note
     }
   };
 
-//   exports.Note = Note;
-// })(this);
 
-// (function(exports) {
-//   function Circle() {
-//     this.radius = 10;
-//   };
-//   exports.Circle = Circle;
-// })(this);
+class Notes {
+
+  constructor(){
+    this.array = [];
+  }
+
+  add(note) {
+    this.array.push(note)
+  }
+};
