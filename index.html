@@ -1,12 +1,22 @@
 <!DOCTYPE html>
 <html>
 <head>
+  <meta charset="utf-8">
+  <title>Note App</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="note-model.js"></script>
+</head>
   <body>
     <h1>Note App</h1>
-  </body>
-  <script src="note-model.js"></script>
-  <script src=""></script>
-  <script src=""></script>
+    <form>
+    <input type="text" id="note" name="note" placeholder="new note: " onsubmit="create()"><br><br>
+    <input type="submit" id="submitbtn" value="Create note">
+    </form>
 
-</head>
+    <h2>Notes</h1>
+    <p id="notes">xyz</p>
+  </body>
+
+
+
 </html>
