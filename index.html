@@ -8,13 +8,40 @@
 </head>
   <body>
     <h1>Note App</h1>
-    <form>
-    <input type="text" id="note" name="note" placeholder="new note: " onsubmit="create()"><br><br>
-    <input type="submit" id="submitbtn" value="Create note">
-    </form>
+    <input type="text" id="userInput" name="note" placeholder="new note: "><br><br>
+    <button id="addBtn">Create note</button>
+    <script>
+    //interface file not model
+    var noteList = new Note();
+
+    function addToPage(noteList) {
+
+      var display = document.getElementById('display');
+      display.innerText = ""
+      for (var i = 0; i < noteList.array.length; i++)
+      {
+        var newDiv = document.createElement("div");
+        display.appendChild(newDiv);
+        var newContent = document.createTextNode(noteList.array[i]);
+        newDiv.appendChild(newContent);
+      }
+
+
+    }
+    function whenClicked() {
+      // Get the input's content
+      var input = document.getElementById('userInput');
+      var text = input.value;
+      noteList.create(text)
+      addToPage(noteList)
+    //   // Clear the input
+      input.value = '';
+    }
+  document.getElementById('addBtn').addEventListener('click', whenClicked);
+    </script>
 
     <h2>Notes</h1>
-    <p id="notes">xyz</p>
+    <div id="display"></div>
   </body>
 
 

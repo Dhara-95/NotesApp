@@ -13,22 +13,24 @@
     this.array = [];
     }
 
-    create(note) {
+    create(text) {
       // this.content = note;
-      this.array.push(note);
+      this.array.push(text);
     }
 
-    list() {
-      var notes = this.array;
-      text = "<ul>";
-      array.forEach(myFunction);
-      text += "</ul>";
-      document.getElementById("notes").innerHTML = notes;
-      function myFunction(value) {
-       text += "<li>" + value + "</li>";
-      }
 
-    }
+    // list() {
+    //   var notes = this.array;
+    //   var text = "<ul>";
+    //   notes.forEach(myFunction);
+    //   text += "</ul>";
+    //
+    //   function myFunction(value) {
+    //     document.getElementById("userInput").innerHTML = notes;
+    //    text += "<li>" + value + "</li>";
+    //   }
+    //
+    // }
   };
 
 //
