@@ -8,6 +8,11 @@ class Note {
     this.content = text
   }
 
+  firstTwenty() {
+    var string = this.content
+    return string.substring(0, 20);
+    
+  }
 };
  
  class NoteList {
@@ -19,12 +24,8 @@ class Note {
     add(text) {
       this.array.push(text);
     }
-
-
+    
   };
-
-
-
 
   //first 20 chars
   // var string = this.array[0]

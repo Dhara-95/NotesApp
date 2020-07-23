@@ -21,7 +21,7 @@ function addToPage(noteList) {
   {
     var newDiv = document.createElement("div");
     display.appendChild(newDiv);
-    var newContent = document.createTextNode(noteList.array[i].content);
+    var newContent = document.createTextNode(noteList.array[i].firstTwenty());
     newDiv.appendChild(newContent);
   }
 }
