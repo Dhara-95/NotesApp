@@ -1,5 +1,17 @@
-//interface file not model
 var noteList = new NoteList();
+
+function whenClicked() {
+  var note = new Note();
+  // Get the input's content
+  var input = document.getElementById('userInput');
+  var text = input.value;
+  note.create(text)
+  noteList.add(note)
+  addToPage(noteList)
+  //   // Clear the input
+  input.value = '';
+}
+document.getElementById('addBtn').addEventListener('click', whenClicked);
 
 function addToPage(noteList) {
 
@@ -9,19 +21,7 @@ function addToPage(noteList) {
   {
     var newDiv = document.createElement("div");
     display.appendChild(newDiv);
-    var newContent = document.createTextNode(noteList.array[i]);
+    var newContent = document.createTextNode(noteList.array[i].content);
     newDiv.appendChild(newContent);
   }
-
-
 }
-function whenClicked() {
-  // Get the input's content
-  var input = document.getElementById('userInput');
-  var text = input.value;
-  noteList.create(text)
-  addToPage(noteList)
-//   // Clear the input
-  input.value = '';
-}
-document.getElementById('addBtn').addEventListener('click', whenClicked);

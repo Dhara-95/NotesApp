@@ -39,15 +39,3 @@ function testNoteIsAddedToTheArray() {
 };
 testNoteIsAddedToTheArray();
 
-
-function printListOfNotes() {
- var notes = new Notes();
- var note = new Note();
- note.create("note1")
- notes.add(note)
- note.create("note2")
- notes.add(note)
- notes.list()
- assert.isTrue(notes.array.includes(note));
-};
-printListOfNotes();
