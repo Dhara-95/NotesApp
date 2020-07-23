@@ -26,16 +26,16 @@ testNoteHasContent();
 
 // Notes class tests
 function testNotesIsInstantiatedWithEmptyArray() {
-  var notes = new Notes();
-  assert.isTrue(notes.array.length === 0);
+  var noteList = new NoteList();
+  assert.isTrue(noteList.array.length === 0);
 };
 testNotesIsInstantiatedWithEmptyArray();
 
 function testNoteIsAddedToTheArray() {
- var notes = new Notes();
+ var noteList = new NoteList();
  var note = new Note();
- notes.add(note)
- assert.isTrue(notes.array.length === 1);
+ noteList.add(note)
+ assert.isTrue(noteList.array.length === 1);
 };
 testNoteIsAddedToTheArray();
 
