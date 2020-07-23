@@ -21,9 +21,21 @@ function addToPage(noteList) {
   display.innerText = ""
   for (var i = 0; i < noteList.array.length; i++)
   {
-    var newDiv = document.createElement("div");
-    display.appendChild(newDiv);
+    var newA = document.createElement("a");
+    var att = document.createAttribute("href");
+    var lineBreak = document.createElement("br");
+    att.value = "#";
+    newA.setAttributeNode(att);
+    display.appendChild(newA);
+    display.appendChild(lineBreak);
     var newContent = document.createTextNode(noteList.array[i].firstTwenty());
-    newDiv.appendChild(newContent);
+    newA.appendChild(newContent);
   }
+}
+
+function createLink() {
+  var anchor = document.getElementById("noteLink");
+  var att = document.createAttribute("href");
+  att.value = "#firstlink";
+  anchor.setAttributeNode(att);
 }
