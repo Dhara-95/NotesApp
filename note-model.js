@@ -1,3 +1,5 @@
+'use strict';
+
 class Note {
 
   constructor(){
@@ -11,7 +13,6 @@ class Note {
   firstTwenty() {
     var string = this.content
     return string.substring(0, 20);
-    
   }
 };
  
@@ -26,7 +27,3 @@ class Note {
     }
     
   };
-
-  //first 20 chars
-  // var string = this.array[0]
-  // string.substring(0, 20);

@@ -1,3 +1,5 @@
+'use strict';
+
 var noteList = new NoteList();
 
 function whenClicked() {

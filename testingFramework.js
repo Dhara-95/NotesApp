@@ -1,3 +1,5 @@
+'use strict';
+
 var assert = {
   isTrue: function(assertionToCheck) {
     if (!assertionToCheck) {
@@ -7,15 +9,3 @@ var assert = {
       }
   }
 };
-
-// var compareText = {
-//   toContain: function(textToCheck) {
-//     var a = a
-//     var b = b
-//     if (a === b) {
-//       console.log("pass " + textToCheck)
-//     } else {
-//       throw new Error("failed: " + textToCheck + " does not match");
-//     }
-//   }
-// };
