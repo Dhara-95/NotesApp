@@ -1,7 +1,8 @@
 # NotesApp
 ![Wireframe](/note-wireframe.png)
 
-##User Stories
+**User Stories**
+----
 
 ```
 As a programmer
@@ -16,3 +17,14 @@ As a programmer
 I can see the full text of an individual note on its own page
 So I can see all the information in the note
 ```
+
+**Contributors**
+----
+
+@katieljones
+
+@JoshuaNg2332
+
+@04alexklink
+
+@Dhara-95

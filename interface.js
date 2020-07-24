@@ -9,7 +9,6 @@ function whenClicked() {
   note.create(text)
   noteList.add(note)
   addToPage(noteList);
-  // createFullNotes(noteList);
   input.value = '';
 }
 document.getElementById('addBtn').addEventListener('click', whenClicked);
@@ -24,7 +23,6 @@ function addToPage(noteList) {
     var att = document.createAttribute("href");
     var lineBreak = document.createElement("br");
     att.value = "#note" + i;
-    console.log(att.value)
     newA.setAttributeNode(att);
     display.appendChild(newA);
     display.appendChild(lineBreak);
@@ -33,44 +31,23 @@ function addToPage(noteList) {
   }
 }
 
-      makeUrlChangeShowNewNote();
+makeUrlChangeShowNewNote();
 
-      function makeUrlChangeShowNewNote() {
-        window.addEventListener("hashchange", showNoteForCurrentPage);
-      };
+function makeUrlChangeShowNewNote() {
+  window.addEventListener("hashchange", showNoteForCurrentPage);
+};
 
-      function showNoteForCurrentPage() {
-        showNote(getNoteFromUrl(window.location));
-        console.log(window.location)
-      };
+function showNoteForCurrentPage() {
+  showNote(getNoteFromUrl(window.location));
+};
 
-      function getNoteFromUrl(location) {
-        return location.hash.split("#")[1];
-      };
+function getNoteFromUrl(location) {
+  var url = location.hash.split("#note")[1];
+  return noteList.array[url].content;
+};
 
-      function showNote(display) {
-        document
-          .getElementById("display")
-          .innerHTML = display;
-      };
-
-
-//   window.addEventListener('hashchange', function () {
-//     hashUpdate.textContent = window.location(noteList.array[i]);
-//   });
-// }
-
-//
-//
-// function createFullNotes(noteList) {
-//   var displayAll = document.getElementById("displayAll");
-//   displayAll.innerText = ""
-//   for (var i = 0; i < noteList.array.length; i++)
-//   {
-//   var listAll = document.createElement("p");
-//   var lineB = document.createElement("br");
-//   listAll.appendChild(lineB);
-//   var newC = document.createTextNode(noteList.array[i]);
-//   listAll.appendChild(newC);
-//   }
-// };
+function showNote(summary) {
+  document
+    .getElementById("summary")
+    .innerHTML = summary;
+};
