@@ -32,10 +32,3 @@ function addToPage(noteList) {
     newA.appendChild(newContent);
   }
 }
-
-function createLink() {
-  var anchor = document.getElementById("noteLink");
-  var att = document.createAttribute("href");
-  att.value = "#firstlink";
-  anchor.setAttributeNode(att);
-}
