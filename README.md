@@ -25,7 +25,7 @@ So I can see all the information in the note
 **Wireframe**
 ----
 
-![Wireframe](/images/note-wireframe.png)
+![Wireframe](/images/wireframe.png)
 
 **Modelling**
 ----
@@ -41,10 +41,16 @@ This web app is hosted on surge (https://surge.sh/) and can be run by clicking t
 http://nutritious-umbrella.surge.sh/
 ```
 
-To ensure all tests are passing open the file below in your browser:
+Alternatively you can use this command in your terminal:
 
 ```
-test_framework.html 
+open index.html
+```
+
+To ensure all tests are passing open the file via the terminal using the command below:
+
+```
+open test_framework.html 
 ```
 
 Then in your browser follow the steps below to see the number of passing tests in your JS console:
